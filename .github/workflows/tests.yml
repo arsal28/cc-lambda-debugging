@@ -1,2 +1,13 @@
 name: tester
 on: push
+jobs: 
+  test-validator:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./tests
+    steps:
+      - name: Checkout to working directory
+      - uses: actions/checkout@v5
+      - name: Run tests
+      - run: insert_test_path_here
